@@ -27,4 +27,35 @@
         <h2>{{ post.title }}</h2>
         <p>{{ post.text|linebreaksbr }}</p>
     </article>
+    <hr>
+    <a class="btn btn-secondary" href="{% url 'add_comment_to_post' pk=post.pk %}">
+        Add comment
+        {% include './icons/chat.svg' %}
+    </a>
+    {% for comment in post.comments.all %}
+        {% if user.is_authenticated or comment.approved_comment %}
+            <div class="comment">
+                <div class="date" >
+                    {{ comment.created_date }}
+                    {% if not comment.approved_comment %}
+                    <a class="btn btn-secondary" href="{% url 'comment_approve' pk=comment.pk %}">
+                        {% include './icons/hand-thumbs-up.svg' %}
+                    </a>
+                    <a class="btn btn-secondary" href="{% url 'comment_remove' pk=comment.pk %}">
+                        {% include './icons/hand-thumbs-down.svg' %}
+                    </a>
+                    {% endif %}
+                </div>
+                <strong>{{ comment.author }}</strong>
+                {% if not comment.approved_comment %}
+                <em><font size="2" color="red">(This post is pending admin approval)</font></em>
+            {% endif %}
+                <p>{{ comment.text|linebreaks }}</p>
+            </div>
+            {% endif %}
+    {% endfor %}
+    {% if post.approved_comments.count == 0 %}
+        <p></p><em>No approved comments yet</em></p>
+    {% endif %}
+    <p><font size="1">comments pending admin approval: {{ post.pending_comments }}</font></p>
 {% endblock %}
