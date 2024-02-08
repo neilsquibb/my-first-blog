@@ -17,13 +17,14 @@ Hosting:
 Resources
 - Google fonts
 
-Software:
+Languages/Libraries/Frameworks:
 - Python
 - Bootstrap
 - CSS
 - Pip
 - SQLite
 - HTML
+- Django
 
 TO DO
 Error fix/update:
@@ -34,14 +35,17 @@ Error fix/update:
 - Update header 2 to include SQLite
 
 Possible Additional features
-- HTML support for posts and comments
 - Error report/idea page
 - Edit dates/additions and dates
 - Images for each post
+- HTML support for comments (need to check if the current method is safe)
 
 COMPLETE
 Error fix/update:
-- 01:26 09/02/2024: Changed posts so they are listed with newest first by 
+- 09/02/2024 02:14: HTML support for posts and comments by changing 
+'|linesbreakbr' to '|safe' on the 'post.text' DTL on the templates.
+
+- 09/02/2024 01:26: Changed posts so they are listed with newest first by 
 putting a '-' infront of 'published_list' and 'draft_list' in the 
 'post_list' and 'post_draft_list' functions on 'views.py'.
 
