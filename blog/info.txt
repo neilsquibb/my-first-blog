@@ -1,0 +1,49 @@
+CREDITS
+Tutorial:
+- Django Girls
+
+Learning material:
+- Django Girls *Super special thanks*
+- Codecacademy
+- Real Python
+
+Help:
+- Stack Overflow
+
+Hosting:
+- PythonAnywhere
+- GitHub
+
+Resources
+- Google fonts
+
+Software:
+- Python
+- Bootstrap
+- CSS
+- Pip
+- SQLite
+- HTML
+
+TO DO
+Error fix/update:
+- Change text from being blue on Drafts page
+- Sort out typo "::" on "admin pending aproval" text
+- Font on "Hello user" to match rest of theme
+- Grey out comment counts to match dates
+- Update header 2 to include SQLite
+
+Possible Additional features
+- HTML support for posts and comments
+- Error report/idea page
+- Edit dates/additions and dates
+- Images for each post
+
+COMPLETE
+Error fix/update:
+- 01:26 09/02/2024: Changed posts so they are listed with newest first by 
+putting a '-' infront of 'published_list' and 'draft_list' in the 
+'post_list' and 'post_draft_list' functions on 'views.py'.
+
+Additional features
+- 

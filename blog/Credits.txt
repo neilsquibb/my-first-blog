@@ -1,2 +1,0 @@
-Learning material:
-Django Girls
