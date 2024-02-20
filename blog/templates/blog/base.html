@@ -13,45 +13,49 @@
                 <div class="row h-100">
                     <div class="col big-box">
                         <h1><a href="/">Neil's Portfolio Blog</a></h1>
-                        <h4>made with Python, HTML, and CSS (inc Bootstrap); using Django framework</h4>
+                        <h4>made with Python, HTML, and CSS (inc Bootstrap); using Django framework (with SQLite)</h4>
                     </div>
                     <div class="col-sm">
                         <div class="row">
                             <div class="col-sm">
                                 {% if user.is_authenticated %}
-                                    <a href="{% url 'logout' %}" class="top-menu" style="text-decoration: none">
-                                        <font size="3">(Log out)</font>
+                                    <a href="{% url 'logout' %}" class="top-menu2" style="text-decoration: none">
+                                        <font size="2">(Log out)</font>
                                         {% include './icons/door-open_edit1.svg' %}
                                     </a>
-                                    <p class="top-menu">
-                                        <font size="5"><b>Hello {{ user.username }}</b></font>
+                                    <p class="top-menu1">
+                                        <b>Hello {{ user.username }}</b>
                                     </p>
                             </div>
-                       </div>
-                       <div class="row">
+                        </div>
+                        <div class="row">
                             <div class="col-sm">
-                                    <a href="{% url 'post_draft_list' %}" class="top-menu" style="text-decoration: none">
-                                        <font size="4">view drafts</font>    
+                                    <a href="{% url 'post_draft_list' %}" class="top-menu2" style="text-decoration: none">
+                                        view drafts    
                                         {% include './icons/list_edit1.svg' %}   
                                     </a>
-                                    <a href="{% url 'post_new' %}" class="top-menu" style="text-decoration: none">
-                                        <font size="4">add new post</font>    
+                                    <a href="{% url 'post_new' %}" class="top-menu2" style="text-decoration: none">
+                                        add new post
                                         {% include './icons/plus-square_edit1.svg' %}
                                     </a>
                                 {% else %}
-                                    <a href="{% url 'login' %}" class="top-menu" style="text-decoration: none">
-                                        <font size="4">  
-                                           admin login 
-                                        </font>    
+                                    <a href="{% url 'login' %}" class="top-menu2" style="text-decoration: none">
+                                        admin login    
                                         {% include './icons/key_edit1.svg' %}
                                     </a>
                                 {% endif %}
                             </div>
-                       </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
+        <nav class="sticky-top">
+            <ul>
+                <li><a href=pass class="top-menu1" style="text-decoration: none">Blog</a></li>
+                <li><a href=pass class="top-menu1" style="text-decoration: none">Projects</a></li>
+            </ul>
+        </nav>
         <main class="container">
             <div class="row">
                 <div class="col">

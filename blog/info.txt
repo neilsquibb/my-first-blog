@@ -1,6 +1,7 @@
 CREDITS
-Tutorial:
-- Django Girls
+Tutorials:
+- Django Girls - blog site
+- Real Python - project cards and image upload
 
 Learning material:
 - Django Girls *Super special thanks*
@@ -27,22 +28,53 @@ Languages/Libraries/Frameworks:
 - Django
 
 TO DO
-Error fix/update:
-- Change text from being blue on Drafts page
-- Sort out typo "::" on "admin pending aproval" text
-- Font on "Hello user" to match rest of theme
-- Grey out comment counts to match dates
-- Update header 2 to include SQLite
+Bugs
+- 
 
-Possible Additional features
-- Error report/idea page
-- Edit dates/additions and dates
-- Images for each post
+Updates:
+- Change text from being blue on Drafts page
+- Grey out comment counts to match dates
+- Make it so there is only a preview on the main page, and the user needs 
+to click through to the post to see the whole article
+- Add links to info.txt
+- Move base.py out of the blog app and into the top folder
+- Sort out folder structure: take the website out of Django Girls folder
+- Improve navbar. Collapse vertically on smaller screens. Add links to
+projects. Create dropdowns
+
+Additional features:
+- Error report/ideas page
+- Add favicon
+- Add projects to website
+- Add links bar in header to click between different parts of the website
+- Credits page from info.txt
+
+Possible additional features:
+- Edit dates/additions and dates?
 - HTML support for comments (need to check if the current method is safe)
+- Add the pages app?
+- Updates page taking updates from info.txt?
 
 COMPLETE
-Error fix/update:
-- 09/02/2024 02:14: HTML support for posts and comments by changing 
+Bug/typo fixes:
+- 19/02/2024 21:29 - Sorted out typo "::" on "admin pending aproval" text
+and added "SQLite" to header
+
+Updates:
+- 20/02/2024 04:24 - Added sticky navbar that spans the width of page.
+
+- 19/02/2024 20:00 - Put margin around images and added to post list, so 
+that the image width won't exceed 20% of the page, and the height won't 
+exceed 200px
+
+- 22:52 - - Font on "Hello user" to match rest of theme and trying to 
+implement a 'top-menu1' and '...2' in the CSS file, so I don't have to 
+change font size and style independently.
+
+- 18/02/2024 - Added image upload to the blog admin page and wrapped text 
+around image on the post list page
+
+- 02:14: HTML support for posts and comments by changing 
 '|linesbreakbr' to '|safe' on the 'post.text' DTL on the templates.
 
 - 09/02/2024 01:26: Changed posts so they are listed with newest first by 
