@@ -35,13 +35,16 @@ Bugs
 
 Updates:
 - Make it so there is only a preview on the main page, and the user needs 
-to click through to the post to see the whole article
+to click through to the post to see the whole article (dropdown?)
 - Add links to info.txt
 - Sort out folder structure: take the website out of Django Girls folder
 - Improve navbar. Collapse vertically on smaller screens. Create dropdowns
 - Move icons all to one file
 - Move CSS file out of blog, to website folder
 - Get nicer image upload widget
+- Add date updated and date created to cards
+- Add subtitle (type) to project cards
+- Tidy up prject cards
 
 Additional features:
 - Error report/ideas page
@@ -67,6 +70,8 @@ edit functions on the views
 and added "SQLite" to header
 
 Updates:
+- 28/02/2024 14:39 - GIT COMMIT "
+
 - 27/02/2024 18:13 - Added favicons for all devices.
 
 - I split the admin tools away from the header and into its own sticky
