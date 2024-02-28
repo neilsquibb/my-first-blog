@@ -1,4 +1,4 @@
-{% extends 'blog/base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
     {% for post in posts %}
@@ -12,8 +12,8 @@
             {% endif %}
             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
             <p>{{ post.text|safe }}</p>
-            <a href="{% url 'post_detail' pk=post.pk %}" style="text-decoration: none; color: black;">
-                <font size="1">approved comments: {{ post.approved_comments.count }}<br>comments pending admin approval: {{ post.pending_comments }}</font>
+            <a href="{% url 'post_detail' pk=post.pk %}" class="counter">
+                approved comments: {{ post.approved_comments.count }}<br>comments pending admin approval: {{ post.pending_comments }}
             </a>
         </div>
     {% endfor %}

@@ -5,6 +5,27 @@
     padding: 20px 20px 20px 40px;
 }
 
+.page-footer {
+    background-color: #C25100;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 20px 20px 20px 40px;
+  }
+
+.navbar {
+    background-color: #333;
+}
+
+.stickyBottomNav {
+    position: fixed;
+    left: 0;
+    top: 25;
+    bottom: 0;
+    width: 100%;
+    z-index: 5;
+    text-align: center;
+ }
+
 .page-header h1,
 .page-header h1 a,
 .page-header h1 a:visited,
@@ -22,8 +43,25 @@ h4 {
     font-family: 'Roboto Slab', serif;
 }
 
+h3,
+h3 a,
+h3 a:visited,
+h3 a:active {
+    color: #000000;
+    text-decoration: none;
+}
+
 .date {
     color: #828282;
+}
+
+.counter,
+.counter:hover,
+.counter:visited,
+.counter:active {
+    color: #828282;
+    font-size: 8pt;
+    text-decoration: none
 }
 
 .save {
@@ -35,27 +73,25 @@ h4 {
     width: 100%;
 }
 
-.top-menu1,
-.top-menu1:hover,
-.top-menu1:visited,
-.top-menu1:active {
+.menu1,
+.menu1:hover,
+.menu1:visited,
+.menu1:active {
     color: #ffffff;
-    float: right;
+    vertical-align: baseline;
     font-size: 20pt;
     margin-right: 20px;
-    vertical-align: middle;
     font-family: 'Roboto Slab', serif;
 }
 
-.top-menu2,
-.top-menu2:hover,
-.top-menu2:visited,
-.top-menu2:active {
+.menu2,
+.menu2:hover,
+.menu2:visited,
+.menu2:active {
     color: #ffffff;
-    float: right;
+    vertical-align: baseline;
     font-size: 12pt;
     margin-right: 20px;
-    vertical-align: middle;
 }
 
 .post {
@@ -115,9 +151,5 @@ li a {
  /* Change the link color to #111 (black) on hover */
  li a:hover {
     background-color: #111;
- }
-
- nav {
-    width: 100%;
  }
 

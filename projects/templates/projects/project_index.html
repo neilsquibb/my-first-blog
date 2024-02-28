@@ -1,21 +1,24 @@
-<!-- projects/templates/projects/project_index.html -->
-
 {% extends "base.html" %}
 
-{% block page_content %}
+{% block content %}
 <h1>Projects</h1>
 <div class="row">
 {% for project in projects %}
-    <div class="col-md-4">
+    <div class="col-md-2" style="min-width: 250px; max-width: 250px">
         <div class="card mb-2">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <a href="{% url 'project_detail' project.pk %}">{{ project.title }}</a>
+                </h3>
+            </div>
             {% if project.image %}
-                <img class="card-img-top" src="{{ project.image.url }}">
+                <a href="{% url 'project_detail' project.pk %}">
+                    <img class="card-img-top" src="{{ project.image.url }}">
+                </a>
             {% endif %}
             <div class="card-body">
-                <h5 class="card-title">{{ project.title }}</h5>
                 <p class="card-text">{{ project.description }}</p>
-                <a href="{% url 'project_detail' project.pk %}"
-                   class="btn btn-primary">
+                <a href="{% url 'project_detail' project.pk %}" class="btn btn-secondary">
                     Read More
                 </a>
             </div>

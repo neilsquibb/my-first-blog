@@ -4,9 +4,11 @@ Tutorials:
 - Real Python - project cards and image upload
 
 Learning material:
-- Django Girls *Super special thanks*
+- Django Girls
 - Codecacademy
 - Real Python
+- Official Django docs
+- Official Bootstrap docs
 
 Help:
 - Stack Overflow
@@ -32,44 +34,80 @@ Bugs
 - 
 
 Updates:
-- Change text from being blue on Drafts page
-- Grey out comment counts to match dates
 - Make it so there is only a preview on the main page, and the user needs 
 to click through to the post to see the whole article
 - Add links to info.txt
-- Move base.py out of the blog app and into the top folder
 - Sort out folder structure: take the website out of Django Girls folder
-- Improve navbar. Collapse vertically on smaller screens. Add links to
-projects. Create dropdowns
+- Improve navbar. Collapse vertically on smaller screens. Create dropdowns
+- Move icons all to one file
+- Move CSS file out of blog, to website folder
+- Get nicer image upload widget
 
 Additional features:
 - Error report/ideas page
-- Add favicon
-- Add projects to website
 - Add links bar in header to click between different parts of the website
 - Credits page from info.txt
+- Learning roadmap app/page
+- Make project cards the same height
 
 Possible additional features:
 - Edit dates/additions and dates?
 - HTML support for comments (need to check if the current method is safe)
-- Add the pages app?
 - Updates page taking updates from info.txt?
+- Change admin tools depending on current webapp?
+- Newsletter email
 
 COMPLETE
 Bug/typo fixes:
+- 22/02/2024 22:26 - Fixed photos uploading via webiste by adding 
+'enctype' to the template form tag, and 'request.FILES' to the new and
+edit functions on the views
+
 - 19/02/2024 21:29 - Sorted out typo "::" on "admin pending aproval" text
 and added "SQLite" to header
 
 Updates:
-- 20/02/2024 04:24 - Added sticky navbar that spans the width of page.
+- 27/02/2024 18:13 - Added favicons for all devices.
 
-- 19/02/2024 20:00 - Put margin around images and added to post list, so 
+- I split the admin tools away from the header and into its own sticky
+navbar; only viewable when logged in
+
+- 22/02/2024 20:15 - Added link to Django admin dash and 'add new project' 
+on my admin tools panel.
+
+- 15:46 - Added container to navbar to make it inline with rest 
+of content
+
+- 15:26 - Made it so the title appeared as the project name in the Django 
+admin page
+
+- 15:12 - Added 'Edit' to Projects page
+
+- 14:28 - Added 'image' field to 'New Post' and 'Edit Post' (alredy on 
+Projects pages)
+
+- 13:47 - Image file structure changed to have different folders for blog 
+and projects.
+
+- 21/02/2024 - 17:05 - Added 'Projects' app and linked up all the pages
+
+- 15:38 - Grey out comment counts to match dates by making new
+'.counter' CSS class.
+
+- Moved 'base.html' out of the blog app, into the website base template 
+folder
+
+- 20/02/2024 04:24 - GIT COMMIT "Formatting changes. Added photos and sticky navbar" 
+
+ - Added sticky navbar that spans the width of page.
+
+- 19/02/2024 22:52 - Font on "Hello user" to match rest of theme and trying to 
+implement a 'menu1' and '...2' in the CSS file, so I don't have to 
+change font size and style independently.
+
+- 20:00 - Put margin around images and added to post list, so 
 that the image width won't exceed 20% of the page, and the height won't 
 exceed 200px
-
-- 22:52 - - Font on "Hello user" to match rest of theme and trying to 
-implement a 'top-menu1' and '...2' in the CSS file, so I don't have to 
-change font size and style independently.
 
 - 18/02/2024 - Added image upload to the blog admin page and wrapped text 
 around image on the post list page
