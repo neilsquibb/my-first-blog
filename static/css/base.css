@@ -1,0 +1,155 @@
+.page-header {
+    background-color: #C25100;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-footer {
+    background-color: #C25100;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 20px 20px 20px 40px;
+  }
+
+.navbar {
+    background-color: #333;
+}
+
+.stickyBottomNav {
+    position: fixed;
+    left: 0;
+    top: 25;
+    bottom: 0;
+    width: 100%;
+    z-index: 5;
+    text-align: center;
+ }
+
+.page-header h1,
+.page-header h1 a,
+.page-header h1 a:visited,
+.page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Roboto Slab', serif;
+}
+
+h3,
+h3 a,
+h3 a:visited,
+h3 a:active {
+    color: #000000;
+    text-decoration: none;
+}
+
+.date {
+    color: #828282;
+}
+
+.counter,
+.counter:hover,
+.counter:visited,
+.counter:active {
+    color: #828282;
+    font-size: 8pt;
+    text-decoration: none
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea,
+.post-form input {
+    width: 100%;
+}
+
+.menu1,
+.menu1:hover,
+.menu1:visited,
+.menu1:active {
+    color: #ffffff;
+    vertical-align: baseline;
+    font-size: 20pt;
+    margin-right: 20px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.menu2,
+.menu2:hover,
+.menu2:visited,
+.menu2:active {
+    color: #ffffff;
+    vertical-align: baseline;
+    font-size: 12pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h2 a,
+.post h2 a:visited {
+    color: #000000;
+}
+
+.post > .date,
+.post > .actions {
+    float: right;
+}
+
+.btn-secondary,
+.btn-secondary:visited {
+    color: #C25100;
+    background: none;
+    border-color: #C25100;
+}
+
+.btn-secondary:hover {
+    color: #FFFFFF;
+    background-color: #C25100;
+}
+
+.comment {
+    margin: 20px 0px 20px 20px;
+}
+
+.comment > .date{
+    float: right;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+ /* Change the link color to #111 (black) on hover */
+ li a:hover {
+    background-color: #111;
+ }
+
