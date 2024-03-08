@@ -31,7 +31,10 @@ Languages/Libraries/Frameworks:
 
 TO DO
 Bugs
-- 
+- Work out why locally the static works in blog folder and web static
+works in base folder
+- Admin navbar cuts off bottom part of viewport
+- Favcons working locally but not on online site
 
 Updates:
 - Make it so there is only a preview on the main page, and the user needs 
@@ -45,13 +48,19 @@ to click through to the post to see the whole article (dropdown?)
 - Add date updated and date created to cards
 - Add subtitle (type) to project cards
 - Tidy up prject cards
+- Make project cards the same height
+- Reformat blog page so it is a series of cards
+- Reformat blog posts on list page so that they only display the first 200
+characters OR summary (would add summary to models).
 
 Additional features:
 - Error report/ideas page
-- Add links bar in header to click between different parts of the website
 - Credits page from info.txt
 - Learning roadmap app/page
-- Make project cards the same height
+- About page
+- Add banner to base.html
+- Subtitle with catagory on cards
+- Project pages using carosel
 
 Possible additional features:
 - Edit dates/additions and dates?
@@ -59,9 +68,14 @@ Possible additional features:
 - Updates page taking updates from info.txt?
 - Change admin tools depending on current webapp?
 - Newsletter email
+- Each project has a blog that links to the home blog
 
 COMPLETE
 Bug/typo fixes:
+- 28/02/2024 17:31 - Fixed the footer so it stays at the bottom of the 
+page by add class to body to keep the viewport 100% of the page, then an
+automargin to the footer
+
 - 22/02/2024 22:26 - Fixed photos uploading via webiste by adding 
 'enctype' to the template form tag, and 'request.FILES' to the new and
 edit functions on the views
@@ -70,7 +84,8 @@ edit functions on the views
 and added "SQLite" to header
 
 Updates:
-- 28/02/2024 14:39 - GIT COMMIT "
+- 28/02/2024 14:39 - GIT COMMIT ""Moved admin tools to a bottom sticky 
+navbar when logged in. Added favicon. Other". Also duplicated 
 
 - 27/02/2024 18:13 - Added favicons for all devices.
 
@@ -106,8 +121,8 @@ folder
 
  - Added sticky navbar that spans the width of page.
 
-- 19/02/2024 22:52 - Font on "Hello user" to match rest of theme and trying to 
-implement a 'menu1' and '...2' in the CSS file, so I don't have to 
+- 19/02/2024 22:52 - Font on "Hello user" to match rest of theme and trying
+to implement a 'menu1' and '...2' in the CSS file, so I don't have to 
 change font size and style independently.
 
 - 20:00 - Put margin around images and added to post list, so 
