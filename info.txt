@@ -34,11 +34,8 @@ Bugs
 - Work out why locally the static works in blog folder and web static
 works in base folder
 - Admin navbar cuts off bottom part of viewport
-- Favcons working locally but not on online site
 
 Updates:
-- Make it so there is only a preview on the main page, and the user needs 
-to click through to the post to see the whole article (dropdown?)
 - Add links to info.txt
 - Sort out folder structure: take the website out of Django Girls folder
 - Improve navbar. Collapse vertically on smaller screens. Create dropdowns
@@ -49,9 +46,7 @@ to click through to the post to see the whole article (dropdown?)
 - Add subtitle (type) to project cards
 - Tidy up prject cards
 - Make project cards the same height
-- Reformat blog page so it is a series of cards
-- Reformat blog posts on list page so that they only display the first 200
-characters OR summary (would add summary to models).
+- Combine the incipit functions in blog/models.py
 
 Additional features:
 - Error report/ideas page
@@ -72,6 +67,13 @@ Possible additional features:
 
 COMPLETE
 Bug/typo fixes:
+- 11/03/2024 03:33 - fixed card images with "object-fit:cover; 
+object-position: 0 0" CSS so image now crops to box from the top left
+
+- 08/03/2024 - Favcons now working, but I have to have them in the blog 
+and root static folders to make them work locally and on website 
+(respectively)
+
 - 28/02/2024 17:31 - Fixed the footer so it stays at the bottom of the 
 page by add class to body to keep the viewport 100% of the page, then an
 automargin to the footer
@@ -84,6 +86,28 @@ edit functions on the views
 and added "SQLite" to header
 
 Updates:
+- 11/03/2024 -
+    - 14:44 - Changed CSS for header and navbars so text and containers
+    are smaller.
+    
+    - 04:47 - Updated CSS for card img so that on hover the image scales 
+    and get translucent on transition. Text also goes a lighter grey.
+
+    - 03:45 - Changed CSS <p> font-size to 12pt. Changed <a>colour to 
+    inherit and text-decoration to none.
+
+- 10/03/2024 15:45 - Completed the blog list grid system using cards into
+columns and rows.
+
+- Made incipit long and short functions on the blog models so that the
+
+blog posts can have long and short preview text
+
+- 09/03/2024 14:16 - Reformated blog post card on list page so that they 
+only display the first 100 characters. Might move this to being a tagline
+
+- 08/03/2024 - Started shifting post_list.html over to a card based display
+
 - 28/02/2024 14:39 - GIT COMMIT ""Moved admin tools to a bottom sticky 
 navbar when logged in. Added favicon. Other". Also duplicated 
 
@@ -135,7 +159,8 @@ around image on the post list page
 - 02:14: HTML support for posts and comments by changing 
 '|linesbreakbr' to '|safe' on the 'post.text' DTL on the templates.
 
-- 09/02/2024 01:26: Changed posts so they are listed with newest first by 
+- 09/02/2024 
+    01:26: Changed posts so they are listed with newest first by 
 putting a '-' infront of 'published_list' and 'draft_list' in the 
 'post_list' and 'post_draft_list' functions on 'views.py'.
 

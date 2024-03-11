@@ -1,20 +1,49 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% for post in posts %}
-        <div class="col">
-            <div class="post">
-            <div class="date">
-                {{ post.published_date }}
-            </div>
-            {% if post.image %}
-                <img src="{{ post.image.url }}" align="left" style="max-height:200px; max-width:20%" hspace="10" vspace="10">
-            {% endif %}
-            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-            <p>{{ post.text|safe }}</p>
-            <a href="{% url 'post_detail' pk=post.pk %}" class="counter">
-                approved comments: {{ post.approved_comments.count }}<br>comments pending admin approval: {{ post.pending_comments }}
+<div class="row">
+    <div class="col-md">
+        <div class="card border-0" style="border-0">
+            <a href="{% url 'post_detail' pk=latest_post.pk %}">
+                <img class="card-img-top" src="{{ latest_post.image.url }}" style="height:400px; object-fit:cover; object-position: 0 0" alt="Card image cap">
+                <div class="card-body">
+                    <h3 class="card-title">{{ latest_post.title }}</h3>
+                    <p class="card-text">{{ latest_post.incipit_long }} <b>...read more</b></p>
+                    <p class="card-text"><small class="text-muted">{{ latest_post.published_date }}</small></p>
+                </div>
             </a>
         </div>
-    {% endfor %}
+    </div>
+    <div class="col">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            {% for post in recent_posts %}
+                <div class="card border-0" style="max-width:50%">
+                    <a href="{% url 'post_detail' pk=post.pk %}">
+                        <img class="card-img-top" src="{{ post.image.url }}" style="height:150px; object-fit: cover; object-position: 0 0" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">{{ post.title }}</h4>
+                            <p class="card-text">{{ post.incipit_short }} <b>...read more</b></p>
+                            <p class="card-text"><small class="text-muted">{{ post.published_date }}</small></p>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        {% for post in posts %}
+            <div class="card border-0" style="max-width:50%">
+                <a href="{% url 'post_detail' pk=post.pk %}">
+                    <img class="card-img-top" src="{{ post.image.url }}" style="height:150px; object-fit:cover; object-position: 0 0" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ post.title }}</h4>
+                        <p class="card-text"><small class="text-muted">{{ post.published_date }}</small></p>
+                    </div>
+                </a>
+            </div>  
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

@@ -9,7 +9,7 @@ class Post(models.Model):
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
-    image = models.FileField(upload_to="blog_images/", blank=True)
+    image = models.FileField(upload_to="blog_images/", blank=False)
 
     def publish(self):
         self.published_date = timezone.now()
@@ -25,6 +25,13 @@ class Post(models.Model):
         approved_comment_count = len(self.comments.filter(approved_comment=True)) 
         total_comment_count = len(self.comments.all())
         return total_comment_count - approved_comment_count
+    
+            # Provides the first section of the text for preview  
+    def incipit_long(self):
+        return self.text[0:499]
+   
+    def incipit_short(self):
+        return self.text[0:99]
     
 class Comment(models.Model):
     post = models.ForeignKey('blog.Post', on_delete=models.CASCADE, related_name='comments')
