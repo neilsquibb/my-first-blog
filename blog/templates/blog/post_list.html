@@ -5,7 +5,7 @@
     <div class="col-md">
         <div class="card border-0" style="border-0">
             <a href="{% url 'post_detail' pk=latest_post.pk %}">
-                <img class="card-img-top" src="{{ latest_post.image.url }}" style="height:400px; object-fit:cover; object-position: 0 0" alt="Card image cap">
+                <img class="card-img-top" src="{{ latest_post.image.url }}" style="height:400px;" alt="Card image cap">
                 <div class="card-body">
                     <h3 class="card-title">{{ latest_post.title }}</h3>
                     <p class="card-text">{{ latest_post.incipit_long }} <b>...read more</b></p>

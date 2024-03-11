@@ -12,6 +12,7 @@ Learning material:
 
 Help:
 - Stack Overflow
+- Reddit
 
 Hosting:
 - PythonAnywhere
@@ -34,19 +35,21 @@ Bugs
 - Work out why locally the static works in blog folder and web static
 works in base folder
 - Admin navbar cuts off bottom part of viewport
+- Admin navbar text not aligned
 
 Updates:
 - Add links to info.txt
 - Sort out folder structure: take the website out of Django Girls folder
 - Improve navbar. Collapse vertically on smaller screens. Create dropdowns
 - Move icons all to one file
-- Move CSS file out of blog, to website folder
 - Get nicer image upload widget
 - Add date updated and date created to cards
-- Add subtitle (type) to project cards
-- Tidy up prject cards
+- Add subtitle (type), technology, catagory, project start and updated 
+date to project cards. Add to admin
+- Tidy up project cards
 - Make project cards the same height
 - Combine the incipit functions in blog/models.py
+- Make website mobile/tablet friendly
 
 Additional features:
 - Error report/ideas page
@@ -54,12 +57,12 @@ Additional features:
 - Learning roadmap app/page
 - About page
 - Add banner to base.html
-- Subtitle with catagory on cards
 - Project pages using carosel
+- Change recent blog cards to be on a carosel which highlights the grid
+of 4
 
 Possible additional features:
 - Edit dates/additions and dates?
-- HTML support for comments (need to check if the current method is safe)
 - Updates page taking updates from info.txt?
 - Change admin tools depending on current webapp?
 - Newsletter email
@@ -87,6 +90,12 @@ and added "SQLite" to header
 
 Updates:
 - 11/03/2024 -
+    - 15:35 - GIT COMMIT "Added incipit to models. Changed to card 
+    format for blog. Made header and navbars smaller"
+
+    - Added additional formatting and changed text size to be a bit 
+    bigger and photos to clip from the top centre.
+
     - 14:44 - Changed CSS for header and navbars so text and containers
     are smaller.
     
