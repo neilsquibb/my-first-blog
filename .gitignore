@@ -11,6 +11,8 @@ venv/
 
 # Database
 db.sqlite3
+/blog/migrations/
+/project/migrations/
 
 # Uploads
 /uploads/

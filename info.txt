@@ -44,12 +44,13 @@ Updates:
 - Move icons all to one file
 - Get nicer image upload widget
 - Add date updated and date created to cards
-- Add subtitle (type), technology, catagory, project start and updated 
+- Add summary (type), technology, catagory, project start and updated 
 date to project cards. Add to admin
 - Tidy up project cards
 - Make project cards the same height
 - Combine the incipit functions in blog/models.py
 - Make website mobile/tablet friendly
+- Make blog and post detail images have bigger right hand margin
 
 Additional features:
 - Error report/ideas page
@@ -60,6 +61,7 @@ Additional features:
 - Project pages using carosel
 - Change recent blog cards to be on a carosel which highlights the grid
 of 4
+- Give blog posts subheading (summery) boxes to displayed on cards
 
 Possible additional features:
 - Edit dates/additions and dates?

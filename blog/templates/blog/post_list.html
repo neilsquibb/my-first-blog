@@ -8,7 +8,8 @@
                 <img class="card-img-top" src="{{ latest_post.image.url }}" style="height:400px;" alt="Card image cap">
                 <div class="card-body">
                     <h3 class="card-title">{{ latest_post.title }}</h3>
-                    <p class="card-text">{{ latest_post.incipit_long }} <b>...read more</b></p>
+                    <h5><i>{{ latest_post.summary }}</i></h5>
+                    <p class="card-text">{{ latest_post.incipit_long|safe }} <b>...read more</b></p>
                     <p class="card-text"><small class="text-muted">{{ latest_post.published_date }}</small></p>
                 </div>
             </a>
@@ -22,7 +23,7 @@
                         <img class="card-img-top" src="{{ post.image.url }}" style="height:150px; object-fit: cover; object-position: 0 0" alt="Card image cap">
                         <div class="card-body">
                             <h4 class="card-title">{{ post.title }}</h4>
-                            <p class="card-text">{{ post.incipit_short }} <b>...read more</b></p>
+                            <p><i>{{ post.summary }}</i><b> ...read more</b></p>
                             <p class="card-text"><small class="text-muted">{{ post.published_date }}</small></p>
                         </div>
                     </a>

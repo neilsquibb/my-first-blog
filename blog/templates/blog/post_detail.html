@@ -28,6 +28,7 @@
         <img src="{{ post.image.url }}" align="left" style="max-height:400px; max-width:30%" hspace="10" vspace="10">
         {% endif %}
         <h2>{{ post.title }}</h2>
+        <p style="font-size:18pt; font-style:italic"><i>{{ post.summary }}</i></p>
         <p>{{ post.text|safe }}</p>
     </article>
     <hr>

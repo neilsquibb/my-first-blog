@@ -6,6 +6,7 @@ from django.utils import timezone
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
+    summary = models.CharField(max_length=150)
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
@@ -28,7 +29,7 @@ class Post(models.Model):
     
             # Provides the first section of the text for preview  
     def incipit_long(self):
-        return self.text[0:499]
+        return self.text[0:299]
    
     def incipit_short(self):
         return self.text[0:99]
